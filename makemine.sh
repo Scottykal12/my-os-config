@@ -3,8 +3,11 @@
 # wget -O - https://raw.githubusercontent.com/scottykal12/my-os-config/main/makemine.sh | bash
 
 # update
+read -p "Enter to start"
 sudo apt update -y
 sudo apt upgrade -y
+sudo apt install curl
+sudo apt install git
 
 git config --global user.name Scott Kalinec
 git config --global user.email scottykal12@gmail.com
