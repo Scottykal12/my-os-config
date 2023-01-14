@@ -1,8 +1,24 @@
 #!/bin/bash
 
+# wget -O - https://raw.githubusercontent.com/<username>/<project>/<branch>/<path>/<file> | bash
+
 # update
 sudo apt update -y
 sudo apt upgrade -y
+
+git config --global user.name Scott Kalinec
+git config --global user.email scottykal12@gmail.com
+
+mkdir Projects
+
+cd Projects
+
+curl "https://api.github.com/users/Scottykal12/repos?page=1&per_page=100" |
+  grep -e 'clone_url*' |
+  cut -d \" -f 4 |
+  xargs -L1 git clone
+
+cd my-os-config
 
 # vscode and extentions
 sudo apt install code -y
