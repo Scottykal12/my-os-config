@@ -6,8 +6,8 @@
 read -p "Enter to start"
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt install curl
-sudo apt install git
+sudo apt install curl -y
+sudo apt install git -y
 
 git config --global user.name Scott Kalinec
 git config --global user.email scottykal12@gmail.com
@@ -27,7 +27,7 @@ cd my-os-config
 
 # vscode and extentions
 sudo apt install code -y
-snap install code --clasic
+snap install code --clasic -y
 read -p "Enter to continue"
 extentions='cat VSextentions'
 for e in $extentions; do
