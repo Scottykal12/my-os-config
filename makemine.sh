@@ -4,7 +4,6 @@
 # wget -O - https://raw.githubusercontent.com/scottykal12/my-os-config/main/makemine.sh >> test.sh && chmod 755 test.sh && ./test.sh
 
 # update
-read -p "Enter to start"
 sudo apt update -y
 sudo apt upgrade -y
 sudo apt install curl -y
@@ -29,7 +28,6 @@ cd my-os-config
 # vscode and extentions
 sudo apt install code -y
 snap install code --classic
-read -p "Enter to continue"
 extentions=cat VSextentions
 for e in $extentions; do
     code --install-extension $e
@@ -40,7 +38,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # libraries
 libs=cat FLTKlibs
-read -p "Enter to continue"
 for l in $libs; do
     sudo apt install $l -y
 done
