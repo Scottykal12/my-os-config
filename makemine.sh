@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# wget -O - https://raw.githubusercontent.com/scottykal12/my-os-config/main/makemine.sh | bash
+# wget -O - https://raw.githubusercontent.com/scottykal12/my-os-config/main/makemine.sh | sh
 
 # update
 read -p "Enter to start"
@@ -27,6 +27,7 @@ cd my-os-config
 
 # vscode and extentions
 sudo apt install code -y
+snap install code --clasic
 read -p "Enter to continue"
 extentions='cat VSextentions'
 for e in $extentions; do
