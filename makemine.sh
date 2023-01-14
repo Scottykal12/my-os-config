@@ -21,13 +21,11 @@ curl "https://api.github.com/users/Scottykal12/repos?page=1&per_page=100" |
   cut -d \" -f 4 |
   xargs -L1 git clone
 
-read -p "Enter to continue"
-
 cd my-os-config
 
 # vscode and extentions
 sudo apt install code -y
-snap install code --classic
+sudo snap install code --classic
 extentionsFILE="VSextentions"
 extentions=$(cat $extentionsFILE)
 for e in $extentions; do
