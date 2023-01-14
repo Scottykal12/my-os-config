@@ -28,7 +28,8 @@ cd my-os-config
 # vscode and extentions
 sudo apt install code -y
 snap install code --classic
-extentions=cat VSextentions
+extentionsFILE="VSextentions"
+extentions=$(cat $extentionsFILE)
 for e in $extentions; do
     code --install-extension $e
 done
@@ -37,7 +38,8 @@ done
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # libraries
-libs=cat FLTKlibs
+libsFILE="FLTKlibs"
+libs=$(cat $libsFILE)
 for l in $libs; do
     sudo apt install $l -y
 done
