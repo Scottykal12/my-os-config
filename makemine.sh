@@ -28,7 +28,7 @@ cd my-os-config
 
 # vscode and extentions
 sudo apt install code -y
-snap install code --classic -y
+snap install code --classic
 read -p "Enter to continue"
 extentions=cat VSextentions
 for e in $extentions; do
