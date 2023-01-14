@@ -29,7 +29,7 @@ cd my-os-config
 sudo apt install code -y
 snap install code --clasic -y
 read -p "Enter to continue"
-extentions='cat VSextentions'
+extentions=cat VSextentions
 for e in $extentions; do
     code --install-extension $e
 done
@@ -38,7 +38,7 @@ done
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # libraries
-libs='cat FLTKlibs'
+libs=cat FLTKlibs
 read -p "Enter to continue"
 for l in $libs; do
     sudo apt install $l -y
