@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # wget -O - https://raw.githubusercontent.com/scottykal12/my-os-config/main/makemine.sh | sh
+# wget -O - https://raw.githubusercontent.com/scottykal12/my-os-config/main/makemine.sh >> test.sh && chmod 755 test.sh && ./test.sh
 
 # update
 read -p "Enter to start"
