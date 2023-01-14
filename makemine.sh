@@ -54,9 +54,6 @@ sudo apt install python3 && python3-pip
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
-# PRoject folder
-mkdir ~/Projects
-
 # git name and email
 git config --global user.name "Scott Kalinec"
 git config --global user.email scottykal12@gmail.com
