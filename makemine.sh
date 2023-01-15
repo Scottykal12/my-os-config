@@ -9,6 +9,11 @@ sudo apt upgrade -y
 sudo apt install curl -y
 sudo apt install git -y
 
+sudo pacman update -y
+sudo pacman upgrade -y
+sudo pacman install curl -y
+sudo pacman install git -y
+
 git config --global user.name Scott Kalinec
 git config --global user.email scottykal12@gmail.com
 
@@ -26,6 +31,7 @@ cd my-os-config
 # vscode and extentions
 sudo apt install code -y
 sudo snap install code --classic
+sudo pacman install code -y
 extentionsFILE="VSextentions"
 extentions=$(cat $extentionsFILE)
 for e in $extentions; do
@@ -40,10 +46,12 @@ libsFILE="FLTKlibs"
 libs=$(cat $libsFILE)
 for l in $libs; do
     sudo apt install $l -y
+    sudo pacman install $l -y
 done
 
 # python and pip
 sudo apt install python3 && python3-pip
+sudo pacman install python3 && python3-pip
 
 # procesing
 # wget https://github.com/processing/processing4/releases/download/processing-1289-4.1.1/processing-4.1.1-linux-x64.tgz
