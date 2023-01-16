@@ -3,6 +3,8 @@
 # wget -O - https://raw.githubusercontent.com/scottykal12/my-os-config/main/makemine.sh | sh
 # wget -O - https://raw.githubusercontent.com/scottykal12/my-os-config/main/makemine.sh >> test.sh && chmod 755 test.sh && ./test.sh
 
+ogPWD=&(pwd)
+
 # update
 sudo apt update -y
 sudo apt upgrade -y
@@ -62,6 +64,5 @@ sudo pacman -S python3 && python3-pip -q --noconfirm
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
-# git name and email
-git config --global user.name "Scott Kalinec"
-git config --global user.email scottykal12@gmail.com
+rm -f google-chrome-stable_current_amd64.deb
+rm $ogPWD/makemine.sh
