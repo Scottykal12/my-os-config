@@ -115,11 +115,11 @@ archInstall() {
 
 osType=$(cat /etc/os-release | grep -i "ID_LIKE")
 
-if [$osType == *debian*]; then
+if [[ "$osType" =~ "debian" ]]; then
   debInstall
 fi
 
-if [$osType == *arch*]; then
+if [[ "$osType" =~ "arch" ]]; then
   archInstall
 fi
 
