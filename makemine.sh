@@ -67,8 +67,8 @@ debInstall() {
 
 archInstall() {
   #  update
-  sudo pacman -Sy -q
-  sudo pacman -Su -q
+  sudo pacman -Sy -q --noconfirm
+  sudo pacman -Su -q --noconfirm
   sudo pacman -S curl -q --noconfirm
   sudo pacman -S git -q --noconfirm
 
