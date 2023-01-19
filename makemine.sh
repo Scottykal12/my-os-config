@@ -54,6 +54,12 @@ debInstall() {
   wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
   sudo dpkg -i google-chrome-stable_current_amd64.deb
 
+  # Powershell
+  sudo apt update  && sudo apt install -y curl gnupg apt-transport-https
+  curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+  sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-bullseye-prod bullseye main" > /etc/apt/sources.list.d/microsoft.list'
+  sudo apt update && sudo apt install -y powershell
+
   # cleanup
   rm -f google-chrome-stable_current_amd64.deb
   rm $ogPWD/makemine.sh
