@@ -50,13 +50,6 @@ debInstall() {
   # python and pip
   sudo apt install python3 && python3-pip -y
 
-  # nvm Node.js
-  curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
-  nvm install 18
-  nvm use 18
-  npm install -g gatsby-cli
-  export NVM_DIR="$HOME/.nvm"
-
   # chrome
   wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
   sudo dpkg -i google-chrome-stable_current_amd64.deb
@@ -136,9 +129,19 @@ if [[ "$osType" =~ "arch" ]]; then
   archInstall
 fi
 
+cd ~
+
 # bash config
 bashconfig=$(cat bashrc)
 echo -e $bashconfig >> ~/.bashrc
+
+# nvm Node.js and Gatsby
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+nvm install 18
+nvm use 18
+npm install -g gatsby-cli
+
 
 # procesing
 # wget https://github.com/processing/processing4/releases/download/processing-1289-4.1.1/processing-4.1.1-linux-x64.tgz
