@@ -50,6 +50,13 @@ debInstall() {
   # python and pip
   sudo apt install python3 && python3-pip -y
 
+  # nvm Node.js
+  curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+  nvm install 18
+  nvm use 18
+  npm install -g gatsby-cli
+  export NVM_DIR="$HOME/.nvm"
+
   # chrome
   wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
   sudo dpkg -i google-chrome-stable_current_amd64.deb
@@ -107,6 +114,12 @@ archInstall() {
   # python and pip
   sudo pacman -S python3 && python3-pip -q --noconfirm
 
+  curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+  nvm install 18
+  nvm use 18
+  npm install -g gatsby-cli
+  export NVM_DIR="$HOME/.nvm"
+
   # chrome
   pamac build google-chrome --no-confirm
 
@@ -122,6 +135,10 @@ fi
 if [[ "$osType" =~ "arch" ]]; then
   archInstall
 fi
+
+# bash config
+bashconfig=$(cat bashrc)
+echo -e $bashconfig >> ~/.bashrc
 
 # procesing
 # wget https://github.com/processing/processing4/releases/download/processing-1289-4.1.1/processing-4.1.1-linux-x64.tgz
