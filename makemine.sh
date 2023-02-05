@@ -41,7 +41,7 @@ debInstall() {
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
   # libraries
-  libsFILE="FLTKlibs"
+  libsFILE="DEVlibs"
   libs=$(cat $libsFILE)
   for l in $libs; do
     sudo apt install $l -y
@@ -98,7 +98,7 @@ archInstall() {
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
   # libraries
-  libsFILE="FLTKlibs"
+  libsFILE="DEVlibs"
   libs=$(cat $libsFILE)
   for l in $libs; do
     sudo pacman -S $l -q --noconfirm
