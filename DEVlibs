@@ -16,3 +16,4 @@ libasound2-dev
 libudev-dev
 libwayland-dev 
 libxkbcommon-dev
+libpcap-dev

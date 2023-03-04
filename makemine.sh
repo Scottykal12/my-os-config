@@ -29,6 +29,7 @@ debInstall() {
   cd my-os-config
 
   # code
+  sudo apt install cmake -y
   sudo apt install code -y
   sudo snap install code --classic
   extentionsFILE="VSextentions"
@@ -87,6 +88,7 @@ archInstall() {
   cd my-os-config
 
   # vscode and extentions
+  sudo apt install cmake -q --noconfirm
   sudo pacman -S code -q --noconfirm
   extentionsFILE="VSextentions"
   extentions=$(cat $extentionsFILE)
