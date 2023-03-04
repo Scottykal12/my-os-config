@@ -11,6 +11,7 @@ debInstall() {
   sudo apt upgrade -y
   sudo apt install curl -y
   sudo apt install git -y
+  sudo apt install htop -y
 
   # config git
   git config --global user.name Scott Kalinec
@@ -88,7 +89,8 @@ archInstall() {
   cd my-os-config
 
   # vscode and extentions
-  sudo apt install cmake -q --noconfirm
+  sudo pacman -S htop -q --noconfirm
+  sudo pacman -S cmake -q --noconfirm
   sudo pacman -S code -q --noconfirm
   extentionsFILE="VSextentions"
   extentions=$(cat $extentionsFILE)
