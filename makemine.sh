@@ -77,6 +77,10 @@ archInstall() {
   sudo pacman -Su -q --noconfirm
   sudo pacman -S curl -q --noconfirm
   sudo pacman -S git -q --noconfirm
+  sudo pacman -S fish -q --noconfirm
+  
+  # set shell to fish
+  sudo chsh -s /usr/bin/fish
 
   git config --global user.name Scott Kalinec
   git config --global user.email scottykal12@gmail.com
