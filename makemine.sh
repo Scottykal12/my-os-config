@@ -139,9 +139,9 @@ fi
 
 cd ~
 
-# bash config
-bashconfig=$(cat bashrc)
-echo -e $bashconfig >> ~/.bashrc
+# # bash config
+# bashconfig=$(cat bashrc)
+# echo -e $bashconfig >> ~/.bashrc
 
 # nvm Node.js and Gatsby
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
