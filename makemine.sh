@@ -12,6 +12,10 @@ debInstall() {
   sudo apt install curl -y
   sudo apt install git -y
   sudo apt install htop -y
+  sudo apt install fish -y
+
+  # set shell to fish
+  sudo chsh -s /usr/bin/fish
 
   # config git
   git config --global user.name Scott Kalinec
