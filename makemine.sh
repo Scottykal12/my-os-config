@@ -13,6 +13,7 @@ debInstall() {
   sudo apt install git -y
   sudo apt install htop -y
   sudo apt install fish -y
+  sudo apt install btop -y
 
   # set shell to fish
   sudo chsh -s /usr/bin/fish
@@ -77,6 +78,7 @@ archInstall() {
   sudo pacman -Su -q --noconfirm
   sudo pacman -S curl -q --noconfirm
   sudo pacman -S git -q --noconfirm
+  sudo pacman -S btop -q --noconfirm
 
   git config --global user.name Scott Kalinec
   git config --global user.email scottykal12@gmail.com
