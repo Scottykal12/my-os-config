@@ -34,7 +34,7 @@ debInstall() {
 
   cd my-os-config
 
-  # code
+  # code configure
   sudo apt install cmake -y
   sudo apt install code -y
   sudo snap install code --classic
@@ -66,6 +66,27 @@ debInstall() {
   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-bullseye-prod bullseye main" > /etc/apt/sources.list.d/microsoft.list'
   sudo apt update && sudo apt install -y powershell
+
+  # Android Compatibility
+  cd ~/Projects
+  git clone https://github.com/choff/anbox-modules.git
+  cd anbox-modules
+  sudo cp anbox.conf /etc/modules-load.d/
+  sudo cp 99-anbox.rules /lib/udev/rules.d/
+  sudo cp -rT ashmem /usr/src/anbox-ashmem-1
+  sudo cp -rT binder /usr/src/anbox-binder-1
+  sudo dkms install anbox-ashmem/1
+  sudo dkms install anbox-binder/1
+  sudo mkdir /etc/modules-load.d
+  echo "nft_xfrm" | sudo tee -a /etc/modules-load.d/waydroid.conf
+  sudo modprobe nft_xfrm
+  sudo apt install curl ca-certificates -y
+  curl https://repo.waydro.id | sudo bash
+  sudo apt install waydroid -y
+
+  sudo sed -i 's/WaylandEnable=false/WaylandEnable=true/g' /etc/gdm3/custom.conf
+  sudo systemctl restart gdm3
+  
 
   # cleanup
   rm -f google-chrome-stable_current_amd64.deb
