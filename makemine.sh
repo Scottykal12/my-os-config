@@ -14,6 +14,8 @@ debInstall() {
   sudo apt install htop -y
   sudo apt install fish -y
   sudo apt install btop -y
+  sudo apt --fix-broken install
+
 
   # set shell to fish
   chsh -s /usr/bin/fish
@@ -72,7 +74,6 @@ debInstall() {
   # sudo modprobe nft_xfrm
   sudo apt install curl ca-certificates -y
   curl https://repo.waydro.id | sudo bash
-  sudo apt --fix-broken
   sudo apt install waydroid -y
   waydroid init -s GAPPS -f
 
