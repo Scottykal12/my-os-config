@@ -62,14 +62,14 @@ debInstall() {
   sudo dpkg -i google-chrome-stable_current_amd64.deb
 
   # Powershell
-  sudo apt update  && sudo apt install -y curl gnupg apt-transport-https
+  sudo apt update && sudo apt install -y curl gnupg apt-transport-https
   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-bullseye-prod bullseye main" > /etc/apt/sources.list.d/microsoft.list'
   sudo apt update && sudo apt install -y powershell
 
   # Android Compatibility
-  echo "nft_xfrm" | sudo tee -a /etc/modules-load.d/waydroid.conf
-  sudo modprobe nft_xfrm
+  # echo "nft_xfrm" | sudo tee -a /etc/modules-load.d/waydroid.conf
+  # sudo modprobe nft_xfrm
   sudo apt install curl ca-certificates -y
   curl https://repo.waydro.id | sudo bash
   sudo apt install waydroid -y
@@ -77,7 +77,6 @@ debInstall() {
 
   sudo sed -i 's/WaylandEnable=false/WaylandEnable=true/g' /etc/gdm3/custom.conf
   sudo systemctl restart gdm3
-  
 
   # cleanup
   rm -f google-chrome-stable_current_amd64.deb
@@ -93,7 +92,7 @@ archInstall() {
   sudo pacman -S git -q --noconfirm
   sudo pacman -S btop -q --noconfirm
   sudo pacman -S fish -q --noconfirm
-  
+
   # set shell to fish
   sudo chsh -s /usr/bin/fish
 
@@ -168,7 +167,6 @@ export NVM_DIR="$HOME/.nvm"
 nvm install 18
 nvm use 18
 npm install -g gatsby-cli
-
 
 # procesing
 # wget https://github.com/processing/processing4/releases/download/processing-1289-4.1.1/processing-4.1.1-linux-x64.tgz
