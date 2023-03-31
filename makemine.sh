@@ -14,9 +14,10 @@ debInstall() {
   sudo apt install htop -y
   sudo apt install fish -y
   sudo apt install btop -y
+  sudo apt --fix-broken install
 
   # set shell to fish
-  sudo chsh -s /usr/bin/fish
+  chsh -s /usr/bin/fish
 
   # config git
   git config --global user.name Scott Kalinec
@@ -76,12 +77,13 @@ debInstall() {
   waydroid init -s GAPPS -f
 
   sudo sed -i 's/WaylandEnable=false/WaylandEnable=true/g' /etc/gdm3/custom.conf
-  sudo systemctl restart gdm3
 
   # cleanup
   rm -f google-chrome-stable_current_amd64.deb
   rm $ogPWD/makemine.sh
-  echo "Log out and login using Pop with Wayland!"
+  read -p "Log out and login using Pop with Wayland!"
+  sudo systemctl restart gdm3
+
 }
 
 archInstall() {
