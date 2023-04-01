@@ -1,4 +1,0 @@
-{
-    "include": ["font/commando/commando.woff", "font/commando/ReadMe.txt", "font/goodtimes/goodtimes.woff", "font/goodtimes/typodermic-eula-03-2020.pdf"],
-    "ignore": ["README.MD", "README.md", "Readme.md", "readme.md"]
-}
