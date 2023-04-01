@@ -58,7 +58,11 @@ debInstall() {
   done
 
   # python and pip
-  sudo apt install python3 && python3-pip -y
+  echo "***********************************************"
+  sudo apt install python3 -y
+  sudo apt install python3-pip -y
+  echo "***********************************************"
+
 
   # chrome
   wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
