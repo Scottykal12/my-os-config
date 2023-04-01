@@ -81,7 +81,7 @@ debInstall() {
   curl https://repo.waydro.id | sudo bash
   sudo apt --fix-broken install
   sudo apt install waydroid -y
-  waydroid init -s GAPPS -f
+  sudo waydroid init -s GAPPS -f
   cd ~/Projects
   # waydroid drm
   sudo apt install lzip sqlite
