@@ -78,9 +78,11 @@ debInstall() {
   sudo apt --fix-broken install
   sudo apt install waydroid -y
   waydroid init -s GAPPS -f
+  cd ~/Projects
   # waydroid drm
   sudo apt install lzip sqlite
   git clone https://github.com/casualsnek/waydroid_script.git
+  cd waydroid_scripts
   sudo python3 -m pip install -r requirements.txt
   sudo python3 main.py -w
 
