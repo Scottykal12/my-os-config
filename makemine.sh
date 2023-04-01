@@ -82,9 +82,8 @@ debInstall() {
   # waydroid drm
   sudo apt install lzip sqlite
   git clone https://github.com/casualsnek/waydroid_script.git
-  cd waydroid_scripts
-  sudo python3 -m pip install -r requirements.txt
-  sudo python3 main.py -w
+  sudo python3 -m pip install -r ~/Projects/waydroid_script/requirements.txt
+  sudo python3 ~/Projects/waydroid_script/main.py -w 
 
   sudo sed -i 's/WaylandEnable=false/WaylandEnable=true/g' /etc/gdm3/custom.conf
 
