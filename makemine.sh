@@ -3,6 +3,7 @@
 # wget -O - https://raw.githubusercontent.com/scottykal12/my-os-config/main/makemine.sh | sh
 # wget -O - https://raw.githubusercontent.com/scottykal12/my-os-config/main/makemine.sh >> test.sh && chmod 755 test.sh && ./test.sh
 
+
 ogPWD=$(pwd)
 
 debInstall() {
@@ -77,6 +78,11 @@ debInstall() {
   sudo apt --fix-broken install
   sudo apt install waydroid -y
   waydroid init -s GAPPS -f
+  # waydroid drm
+  sudo apt install lzip sqlite
+  git clone https://github.com/casualsnek/waydroid_script.git
+  sudo python3 -m pip install -r requirements.txt
+  sudo python3 main.py -w
 
   sudo sed -i 's/WaylandEnable=false/WaylandEnable=true/g' /etc/gdm3/custom.conf
 
