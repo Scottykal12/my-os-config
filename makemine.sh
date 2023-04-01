@@ -14,6 +14,7 @@ debInstall() {
   sudo apt install htop -y
   sudo apt install fish -y
   sudo apt install btop -y
+  flatpak install --noninteractive protonvpn
 
 
   # set shell to fish
