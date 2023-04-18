@@ -49,6 +49,7 @@ debInstall() {
 
   # rust
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  sed -i '/end/i export PATH="$HOME/.cargo/bin:$PATH"' ~/.config/fish/config.fish
 
   # libraries
   libsFILE="DEVlibs"
