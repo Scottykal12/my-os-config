@@ -15,6 +15,7 @@ debInstall() {
   sudo apt install htop -y
   sudo apt install fish -y
   sudo apt install btop -y
+  sudo apt install npm -y
   flatpak install --noninteractive protonvpn
 
 
@@ -89,6 +90,9 @@ debInstall() {
   sudo python3 ~/Projects/waydroid_script/main.py -w 
 
   sudo sed -i 's/WaylandEnable=false/WaylandEnable=true/g' /etc/gdm3/custom.conf
+
+  # Decky Plugins dev
+  sudo npm i -g pnpm@8.5.1
 
   # cleanup
   rm -f google-chrome-stable_current_amd64.deb
