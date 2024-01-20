@@ -19,4 +19,6 @@ Invoke-WebRequest -Uri https://emulationstation.org/downloads/releases/emulation
 Remove-Item -OutFile $env:USERPROFILE\.emulationstation\es_systems.cfg
 Invoke-WebRequest -Uri https://raw.githubusercontent.com/Scottykal12/my-os-config/main/es_systems.cfg -OutFile $env:USERPROFILE\.emulationstation\es_systems.cfg
 
-New-Item -ItemType Directory $env:USERPROFILE\.emulationstation\roms
+foreach ($i in Get-Content .\paths.txt) {
+    New-Item -ItemType Directory $env:USERPROFILE$i
+}
