@@ -2,8 +2,8 @@ New-Item -ItemType Directory .\config-os
 Set-Location .\config-os
 
 # install code steam and galaxy
-wingit install Microsoft.VisualStudioCode
-wingit intall Valve.Steam
+winget install Microsoft.VisualStudioCode
+winget intall Valve.Steam
 winget install GOG.Galaxy
 winget install Google.Chrome
 
