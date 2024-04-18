@@ -7,6 +7,11 @@ winget install Valve.Steam
 winget install GOG.Galaxy
 winget install Google.Chrome
 winget install Meta.Oculus
+winget install Git.Git
+
+# git commands may not work before reload of terminal
+git config --global user.name Scott Kalinec
+git config --global user.email scottykal12@gmail.com
 
 # emulation
 # retroarch
@@ -17,7 +22,7 @@ Invoke-WebRequest -Uri https://buildbot.libretro.com/stable/1.17.0/windows/x86_6
 Invoke-WebRequest -Uri https://emulationstation.org/downloads/releases/emulationstation_win32_latest.exe -OutFile emu.exe
 .\emu.exe
 
-Remove-Item -OutFile $env:USERPROFILE\.emulationstation\es_systems.cfg
+Remove-Item -Path $env:USERPROFILE\.emulationstation\es_systems.cfg
 Invoke-WebRequest -Uri https://raw.githubusercontent.com/Scottykal12/my-os-config/main/es_systems.cfg -OutFile $env:USERPROFILE\.emulationstation\es_systems.cfg
 
 foreach ($i in Get-Content .\paths.txt) {
