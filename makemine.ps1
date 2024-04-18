@@ -3,7 +3,7 @@ Set-Location .\config-os
 
 # install code steam and galaxy
 winget install Microsoft.VisualStudioCode
-winget intall Valve.Steam
+winget install Valve.Steam
 winget install GOG.Galaxy
 winget install Google.Chrome
 winget install Meta.Oculus
