@@ -6,10 +6,11 @@ winget install Microsoft.VisualStudioCode
 winget intall Valve.Steam
 winget install GOG.Galaxy
 winget install Google.Chrome
+winget install Meta.Oculus
 
 # emulation
 # retroarch
-Invoke-WebRequest -Uri https://buildbot.libretro.com/stable/1.16.0/windows/x86_64/RetroArch-Win64-setup.exe -OutFile retroarch.exe
+Invoke-WebRequest -Uri https://buildbot.libretro.com/stable/1.17.0/windows/x86_64/RetroArch-Win64-setup.exe -OutFile retroarch.exe
 .\retroarch
 
 # emulationstation
