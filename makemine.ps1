@@ -13,10 +13,14 @@ winget install Git.Git
 git config --global user.name Scott Kalinec
 git config --global user.email scottykal12@gmail.com
 
+Invoke-WebRequest -Uri https://dl.google.com/drive-file-stream/GoogleDriveSetup.exe
+.\GoogleDriveSetup.exe
+
+
 # emulation
 # retroarch
 Invoke-WebRequest -Uri https://buildbot.libretro.com/stable/1.17.0/windows/x86_64/RetroArch-Win64-setup.exe -OutFile retroarch.exe
-.\retroarch
+.\retroarch.exe
 
 # emulationstation
 Invoke-WebRequest -Uri https://emulationstation.org/downloads/releases/emulationstation_win32_latest.exe -OutFile emu.exe
