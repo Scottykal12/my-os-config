@@ -8,6 +8,8 @@ winget install GOG.Galaxy
 winget install Google.Chrome
 winget install Meta.Oculus
 winget install Git.Git
+winget install WinSCP.WinSCP
+winget install Malwarebytes.Malwarebytes
 
 # git commands may not work before reload of terminal
 git config --global user.name Scott Kalinec
