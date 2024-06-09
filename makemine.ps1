@@ -10,6 +10,7 @@ winget install Meta.Oculus
 winget install Git.Git
 winget install WinSCP.WinSCP
 winget install Malwarebytes.Malwarebytes
+winget install Oracle.VirtualBox
 
 # git commands may not work before reload of terminal
 git config --global user.name Scott Kalinec
@@ -17,7 +18,6 @@ git config --global user.email scottykal12@gmail.com
 
 Invoke-WebRequest -Uri https://dl.google.com/drive-file-stream/GoogleDriveSetup.exe
 .\GoogleDriveSetup.exe
-
 
 # emulation
 # retroarch
