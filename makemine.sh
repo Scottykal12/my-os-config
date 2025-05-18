@@ -77,22 +77,22 @@ debInstall() {
   # Android Compatibility
   # echo "nft_xfrm" | sudo tee -a /etc/modules-load.d/waydroid.conf
   # sudo modprobe nft_xfrm
-  sudo apt install curl ca-certificates -y
-  curl https://repo.waydro.id | sudo bash
-  sudo apt --fix-broken install
-  sudo apt install waydroid -y
-  sudo waydroid init -s GAPPS -f
-  cd ~/Projects
-  # waydroid drm
-  sudo apt install lzip sqlite
-  git clone https://github.com/casualsnek/waydroid_script.git
-  sudo python3 -m pip install -r ~/Projects/waydroid_script/requirements.txt
-  sudo python3 ~/Projects/waydroid_script/main.py -w 
+  # sudo apt install curl ca-certificates -y
+  # curl https://repo.waydro.id | sudo bash
+  # sudo apt --fix-broken install
+  # sudo apt install waydroid -y
+  # sudo waydroid init -s GAPPS -f
+  # cd ~/Projects
+  # # waydroid drm
+  # sudo apt install lzip sqlite
+  # git clone https://github.com/casualsnek/waydroid_script.git
+  # sudo python3 -m pip install -r ~/Projects/waydroid_script/requirements.txt
+  # sudo python3 ~/Projects/waydroid_script/main.py -w 
 
-  sudo sed -i 's/WaylandEnable=false/WaylandEnable=true/g' /etc/gdm3/custom.conf
+  # sudo sed -i 's/WaylandEnable=false/WaylandEnable=true/g' /etc/gdm3/custom.conf
 
   # Decky Plugins dev
-  sudo npm i -g pnpm@8.5.1
+  # sudo npm i -g pnpm@8.5.1
 
   # cleanup
   rm -f google-chrome-stable_current_amd64.deb
